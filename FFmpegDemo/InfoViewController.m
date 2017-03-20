@@ -21,8 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"see the console log";
-    
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self configure];
+}
+
+- (void)configure
+{
     NSLog(@"Configure configuration:");
     av_register_all();
     printf("%s\n", avcodec_configuration());
